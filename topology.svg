@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">Lab 01: Basic IPv4 routing between two LANs</title>
+  <desc id="desc">PC-A connects through switch S1 to router R1, then through switch S2 to PC-B. The LANs use 192.168.10.0/24 and 192.168.20.0/24.</desc>
+  <rect width="1200" height="330" fill="#ffffff"/>
+  <text x="600" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#172b4d">Lab 01 — Basic IPv4 Routing Between Two LANs</text>
+  <rect x="35" y="66" width="490" height="220" rx="18" fill="#f0f6ff" stroke="#b8cbea" stroke-width="2"/>
+  <text x="265" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#234e82">LAN A · 192.168.10.0/24</text>
+  <rect x="675" y="66" width="490" height="220" rx="18" fill="#f2f8f4" stroke="#b8d7c4" stroke-width="2"/>
+  <text x="925" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#246342">LAN B · 192.168.20.0/24</text>
+  <g stroke="#486581" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M170 174 H260"/><path d="M350 174 H520"/><path d="M680 174 H850"/><path d="M940 174 H1030"/>
+  </g>
+  <g fill="#ffffff" stroke="#486581" stroke-width="2.5">
+    <rect x="80" y="132" width="90" height="84" rx="12"/>
+    <rect x="260" y="142" width="90" height="64" rx="10"/>
+    <rect x="520" y="124" width="160" height="100" rx="14"/>
+    <rect x="850" y="142" width="90" height="64" rx="10"/>
+    <rect x="1030" y="132" width="90" height="84" rx="12"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#172b4d" text-anchor="middle">
+    <text x="125" y="161" font-size="16" font-weight="700">PC-A</text>
+    <text x="125" y="181" font-size="12">IP .10.10</text>
+    <text x="125" y="198" font-size="12">GW .10.1</text>
+    <text x="305" y="169" font-size="16" font-weight="700">S1</text>
+    <text x="305" y="188" font-size="12">Layer 2 switch</text>
+    <text x="600" y="151" font-size="20" font-weight="700">R1 · Router</text>
+    <text x="600" y="174" font-size="12">G0/0: 192.168.10.1/24</text>
+    <text x="600" y="193" font-size="12">G0/1: 192.168.20.1/24</text>
+    <text x="895" y="169" font-size="16" font-weight="700">S2</text>
+    <text x="895" y="188" font-size="12">Layer 2 switch</text>
+    <text x="1075" y="161" font-size="16" font-weight="700">PC-B</text>
+    <text x="1075" y="181" font-size="12">IP .20.10</text>
+    <text x="1075" y="198" font-size="12">GW .20.1</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#52667a" text-anchor="middle">
+    <text x="215" y="245">PC Fa0 ↔ S1 Fa0/1</text>
+    <text x="435" y="245">S1 Fa0/24 ↔ R1 G0/0</text>
+    <text x="765" y="245">R1 G0/1 ↔ S2 Fa0/24</text>
+    <text x="985" y="245">S2 Fa0/1 ↔ PC Fa0</text>
+  </g>
+  <text x="600" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#52667a">R1 routes between the two connected /24 networks; no static routes are required.</text>
+</svg>

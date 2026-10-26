@@ -1,0 +1,22 @@
+enable
+! Lab 01 - S2 - simple Layer 2 access switch
+! Assumes a Cisco 2960-style switch with FastEthernet0/1 and FastEthernet0/24.
+
+configure terminal
+hostname S2
+no ip domain-lookup
+
+interface FastEthernet0/1
+ description PC-B
+ switchport mode access
+ no shutdown
+ exit
+
+interface FastEthernet0/24
+ description R1_GigabitEthernet0/1
+ switchport mode access
+ no shutdown
+ exit
+
+end
+copy running-config startup-config

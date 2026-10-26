@@ -1,0 +1,11 @@
+flowchart LR
+    PCA["PC-A<br/>192.168.10.10/24<br/>GW 192.168.10.1"]
+    S1["S1 — Layer 2 switch"]
+    R1["R1 — Router<br/>G0/0: 192.168.10.1/24<br/>G0/1: 192.168.20.1/24"]
+    S2["S2 — Layer 2 switch"]
+    PCB["PC-B<br/>192.168.20.10/24<br/>GW 192.168.20.1"]
+
+    PCA ---|"PC FastEthernet0 ↔ S1 Fa0/1"| S1
+    S1 ---|"S1 Fa0/24 ↔ R1 G0/0"| R1
+    R1 ---|"R1 G0/1 ↔ S2 Fa0/24"| S2
+    S2 ---|"S2 Fa0/1 ↔ PC FastEthernet0"| PCB
